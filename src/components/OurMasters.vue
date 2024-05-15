@@ -1,7 +1,7 @@
 <template>
   <div class="our_masters">
     <div class="about_masters">
-      <p class="about_upperTitle">наш коллектив</p>
+      <p class="about_upperTitle">наши творцы</p>
       <h1 class="about_title">МАСТЕРА</h1>
       <div class="line"></div>
     </div>
@@ -24,8 +24,8 @@ export default {
   data() {
     return {
       masters: [
-        {link: "/img/AlexandrJoukin.jpeg", name: "Александр Joukin|Gun", text: "Готика, трайбл, органика"},
-        {link: "/img/AlinaGeksly.jpeg", name: "Алина Geksly", text: "Гравюра, орнаментальные узоры"},
+        {link: "/img/AlexandrJoukin.jpeg", name: "Александр Joukin|Gun", text: "готика, трайбл, органика"},
+        {link: "/img/AlinaGeksly.jpeg", name: "Алина Geksly", text: "гравюра, орнаментальные узоры"},
       ],
     }
   }
@@ -48,11 +48,11 @@ export default {
   padding-bottom: 2%;
 }
 .about_title {
-  font-size: 40px;
+  font-size: 50px;
   color: white;
 }
 .about_upperTitle {
-  font-size: 14px;
+  font-size: 18px;
   font-family: Roboto-thin;
   color: white;
 }
@@ -76,11 +76,11 @@ export default {
   text-align: center;
   background-color: white;
   padding: 10px;
-  border-radius: 10%;
+  border-radius: 20px;
   border: solid 2px #ff8562;
 }
 .master img {
-  border-radius: 10%;
+  border-radius: 20px;
   max-width: 300px;
   max-height: 300px;
 }
@@ -92,10 +92,59 @@ export default {
 }
 .master h1{
   font-family: Gothic_2;
-  font-size: 24px;
+  font-size: 28px;
 }
 .master p{
-  font-size: 14px;
+  font-size: 16px;
   color: grey;
+}
+@media screen and (max-width: 1024px) {
+  .about_title {
+    font-size: 35px;
+  }
+  .about_upperTitle {
+    font-size: 16px;
+  }
+  .line {
+    height: 1px;
+    width: 90px;
+    margin: 10px auto 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about_title {
+    font-size: 25px;
+  }
+  .about_upperTitle {
+    font-size: 12px;
+  }
+  .line {
+    height: 1px;
+    width: 80px;
+    margin: 5px auto 0 auto;
+  }
+  .our_masters {
+    max-width: 768px;
+  }
+  .masters {
+    gap: 10px;
+  }
+  .master {
+    flex-direction: row;
+  }
+  .master img {
+    max-width: 300px;
+    max-height: 150px;
+  }
+  .info {
+    justify-content: center;
+    max-width: 150px;
+  }
+  .master h1{
+    font-size: 25px;
+  }
+  .master p{
+    font-size: 12px;
+  }
 }
 </style>

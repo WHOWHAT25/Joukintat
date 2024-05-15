@@ -1,10 +1,8 @@
 <template>
   <div class="container">
     <swiper class="slider"
-            :space-between="50"
-            :effect="'fade'"
-            :autoplay=" {
-              delay: 2500,
+            :autoplay="{
+              delay: 3000,
               pauseOnMouseEnter: true,
               disableOnInteraction: false,
               loop: true,
@@ -13,6 +11,7 @@
             :pagination="{
               clickable: true,
             }"
+            v-show="slideList"
     >
       <swiper-slide v-for="item in slideList" class="slider_slide">
         <div class="slide_img">
@@ -26,16 +25,11 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 
 export default {
   name: "StudioSlider",
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
   data() {
     return {
       slideList: [
@@ -45,7 +39,11 @@ export default {
       ],
       modules: [EffectFade, Autoplay, Pagination],
     }
-  }
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
 }
 </script>
 
@@ -78,9 +76,33 @@ export default {
   :deep(.swiper-pagination-bullets) {
     bottom: 10%;
   }
-
   :deep(.swiper-pagination-bullet-active) {
-    background-color: #ff8562;
+    background-color: #ff8562 !important;
+  }
+  :deep(.swiper-pagination-bullet) {
+    background-color: black;
+    border: solid 1px #282828;
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .slider {
+    max-width: 600px;
+    max-height: 100%;
+  }
+  .slide_img {
+    max-height: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    max-width: 350px;
+    max-height: 100%;
+  }
+  .slide_img {
+    max-height: 100%;
   }
 }
 </style>

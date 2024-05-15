@@ -23,6 +23,7 @@ export default {
 /* Секция с адаптивными картинкой и текстом */
 .intro {
   max-height: 100vh;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -49,11 +50,11 @@ export default {
   z-index: 3;
 }
 .intro_title_1 {
-  font-size: 100px;
+  font-size: 150px;
   font-family: Gothic_2;
 }
 .intro_title_2 {
-  font-size: 22px;
+  font-size: 28px;
   font-family: Puchka;
 }
 .container {
@@ -75,5 +76,23 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media screen and (max-width: 1024px) {
+  .intro_title_1 {
+    font-size: 100px;
+    padding-top: 40px;
+  }
+  .intro_title_2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro_title_1 {
+    font-size: 45px;
+    padding-top: 40px;
+  }
+  .intro_title_2 {
+    font-size: 14px;
+  }
 }
 </style>

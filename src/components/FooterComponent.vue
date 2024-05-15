@@ -42,23 +42,51 @@ footer {
   padding-inline: 30px;
 }
 footer img {
-  max-height: 25px;
-  max-width: 25px;
+  max-height: 50px;
+  max-width: 50px;
   margin: 5px;
 }
 .logo {
   margin: 2%;
   font-family: Gothic_2;
-  font-size: 22px;
+  font-size: 1.8em;
 }
 .phone {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.5em;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  footer img {
+    max-height: 35px;
+    max-width: 35px;
+    margin: 10px;
+  }
+  .logo {
+    margin: 2%;
+    font-size: 1.8em;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  footer img {
+    max-height: 25px;
+    max-width: 25px;
+    margin: 5px;
+  }
+  .logo {
+    margin: 2%;
+    font-size: 1.5em;
+  }
+  .phone {
+    display: none;
+  }
 }
 </style>

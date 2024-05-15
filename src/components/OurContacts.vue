@@ -94,11 +94,11 @@ export default {
   padding-bottom: 2%;
 }
 .about_title {
-  font-size: 40px;
+  font-size: 50px;
   color: white;
 }
 .about_upperTitle {
-  font-size: 14px;
+  font-size: 18px;
   font-family: Roboto-thin;
   color: white;
 }
@@ -128,9 +128,11 @@ export default {
 }
 .map_text h1 {
   font-family: Gothic_2;
+  font-size: 50px;
 }
 .map_text p {
   font-family: Roboto;
+  font-size: 18px;
 }
 .nav {
   display: flex;
@@ -151,6 +153,108 @@ export default {
   height: 400px;
   width: 700px;
   border: solid 2px #ff8562;
-  border-left: none;
+}
+@media screen and (max-width: 1024px) {
+  .our_contacts {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 1024px
+  }
+  .about_title {
+    font-size: 35px;
+  }
+  .about_upperTitle {
+    font-size: 16px;
+  }
+  .line {
+    height: 1px;
+    width: 90px;
+    margin: 10px auto 0 auto;
+  }
+  .road_map {
+    display: flex;
+    justify-content: center;
+  }
+  .map_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px 0 0 25px;
+    border: solid 2px #ff8562;
+  }
+  .map_text h1 {
+    font-family: Gothic_2;
+    font-size: 35px;
+  }
+  .map_text p {
+    font-family: Roboto;
+    font-size: 16px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  .nav img {
+    max-height: 35px;
+    max-width: 35px;
+    margin: 5px;
+  }
+  .map {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 500px;
+    border: solid 2px #ff8562;
+  }
+}
+@media screen and (max-width: 768px) {
+  .our_contacts {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 768px
+  }
+  .about_title {
+    font-size: 25px;
+  }
+  .about_upperTitle {
+    font-size: 12px;
+  }
+  .line {
+    height: 1px;
+    width: 80px;
+    margin: 5px auto 0 auto;
+  }
+  .road_map {
+    flex-direction: column;
+    align-items: center;
+  }
+  .map_text {
+    align-items: center;
+    border-radius: 25px 25px 0 0;
+    border: solid 2px #ff8562;
+    width: 350px;
+  }
+  .map_text h1 {
+    font-size: 25px;
+  }
+  .map_text p {
+    font-size: 12px;
+  }
+  .nav img {
+    max-height: 25px;
+    max-width: 25px;
+    margin: 5px;
+  }
+  .map {
+    height: 250px;
+    width: 350px;
+    border-top: none;
+  }
 }
 </style>

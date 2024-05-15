@@ -52,11 +52,11 @@ export default {
   padding-bottom: 2%;
 }
 .about_title {
-  font-size: 40px;
+  font-size: 50px;
   color: white;
 }
 .about_upperTitle {
-  font-size: 14px;
+  font-size: 18px;
   font-family: Roboto-thin;
   color: white;
 }
@@ -80,9 +80,60 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 1s transform ease-in-out;
 }
 .tatoo img:hover {
   transform: scale(1.5);
+}
+@media screen and (max-width: 1024px) {
+  .our_works {
+    max-width: 1024px;
+  }
+  .about_title {
+    font-size: 35px;
+  }
+  .about_upperTitle {
+    font-size: 16px;
+  }
+  .line {
+    height: 1px;
+    width: 90px;
+    margin: 10px auto 0 auto;
+  }
+  .tatoos {
+    gap: 15px;
+  }
+  .tatoo {
+    max-height: 210px;
+    max-width: 210px;
+  }
+  .tatoo img:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .our_works {
+    max-width: 768px;
+  }
+  .about_title {
+    font-size: 25px;
+  }
+  .about_upperTitle {
+    font-size: 12px;
+  }
+  .line {
+    height: 1px;
+    width: 80px;
+    margin: 5px auto 0 auto;
+  }
+  .tatoos {
+    gap: 10px;
+  }
+  .tatoo {
+    max-height: 150px;
+    max-width: 150px;
+  }
+  .tatoo img:hover {
+    transform: none;
+  }
 }
 </style>

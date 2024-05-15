@@ -5,7 +5,7 @@ import StudioSlider from "@/components/StudioSlider.vue";
 import OurServices from "@/components/OurServices.vue";
 import OurMasters from "@/components/OurMasters.vue";
 import OurWorks from "@/components/OurWorks.vue";
-import Contacts from "@/components/Contacts.vue";
+import Contacts from "@/components/OurContacts.vue";
 import {ref} from "vue";
 
 import {useCounterStore} from "@/stores/counter.js";

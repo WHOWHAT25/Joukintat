@@ -1,12 +1,7 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
+
   const about = null
   const works = null
   const contacts = null
@@ -26,5 +21,5 @@ export const useCounterStore = defineStore('counter', () => {
     window.scrollTo({left: 0, top: top - 100, behavior: 'smooth'})
   }
 
-  return { count, doubleCount, about, works, contacts, scrollToAbout, scrollToWorks, scrollToContacts }
+  return { about, works, contacts, scrollToAbout, scrollToWorks, scrollToContacts }
 })
