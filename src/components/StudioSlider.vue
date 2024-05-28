@@ -13,7 +13,7 @@
             }"
             v-show="slideList"
     >
-      <swiper-slide v-for="item in slideList" class="slider_slide">
+      <swiper-slide v-for="item in slideList" :key="item" class="slider_slide">
         <div class="slide_img">
           <img :src="item.link">
         </div>

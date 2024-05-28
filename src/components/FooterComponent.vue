@@ -6,7 +6,7 @@
       <p>+ 7 (952) 882-06-01</p>
     </div>
     <div class="nav">
-      <div v-for="i in foot">
+      <div v-for="i in foot" :key="i">
         <a :href="i.link" target="_blank">
           <img :src="i.img">
         </a>

@@ -11,7 +11,7 @@
         <p>+ 7 (952) 882-06-01</p>
         <p>ул.Сергея лазо 17</p>
         <div class="nav">
-          <div v-for="i in foot">
+          <div v-for="i in foot" :key="i">
             <a :href="i.link" target="_blank">
               <img :src="i.img">
             </a>
@@ -81,7 +81,7 @@ export default {
 // const center = ["85.038154", "56.517331"]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .our_contacts {
   display: flex;
   flex-direction: column;
@@ -90,18 +90,24 @@ export default {
   padding-top: 30px;
   padding-bottom: 50px;
 }
-.about_contacts {
-  padding-bottom: 2%;
+
+.about {
+  &_contacts {
+    padding-bottom: 2%;
+  }
+
+  &_title {
+    font-size: 50px;
+    color: white;
+  }
+
+  &_upperTitle {
+    font-size: 18px;
+    font-family: Roboto-thin;
+    color: white;
+  }
 }
-.about_title {
-  font-size: 50px;
-  color: white;
-}
-.about_upperTitle {
-  font-size: 18px;
-  font-family: Roboto-thin;
-  color: white;
-}
+
 .line {
   height: 2px;
   width: 100px;
