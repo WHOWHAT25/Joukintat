@@ -8,23 +8,7 @@
       </div>
     </div>
     <div class="service-container">
-      <div class="service" v-for="i in services">
-        <div class="icon">
-          <img :src="i.link">
-        </div>
-        <h2>{{i.name}}</h2>
-      </div>
-    </div>
-    <div class="service-container_2">
-      <div class="service" v-for="i in services_2">
-        <div class="icon">
-          <img :src="i.link">
-        </div>
-        <h2>{{i.name}}</h2>
-      </div>
-    </div>
-    <div class="service-container_3">
-      <div class="service" v-for="i in services_3">
+      <div class="service" v-for="i in services" :key="i">
         <div class="icon">
           <img :src="i.link">
         </div>
@@ -119,18 +103,13 @@ export default {
   margin: 15px auto 0 auto;
 }
 .service-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   max-width: 1440px;
   margin-inline: auto;
 }
-.service-container_2 {
-  display: none;
-}
-.service-container_3 {
-  display: none;
-}
+
 .service {
   display: flex;
   flex-direction: column;
@@ -201,28 +180,14 @@ export default {
     margin: 10px auto 0 auto;
   }
   .service-container {
-    display: none;
-  }
-  .service-container_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1024px;
-  }
-  .service-container_3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1024px;
+    grid-template-columns: repeat(2, 1fr);
   }
   .service {
-    max-height: 220px;
-    max-width: 220px;
+    height: 220px;
+    width: 160px;
     font-size: 16px;
   }
   .icon {
-    max-height: 160px;
-    max-width: 160px;
     margin: 15px;
     padding: 20px;
   }
@@ -245,29 +210,12 @@ export default {
     width: 80px;
     margin: 5px auto 0 auto;
   }
-  .service-container {
-    display: none;
-  }
-  .service-container_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 768px;
-  }
-  .service-container_3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 768px;
-  }
   .service {
     max-height: 180px;
-    max-width: 180px;
+    max-width: 130px;
     font-size: 12px;
   }
   .icon {
-    max-height: 130px;
-    max-width: 130px;
     margin: 10px;
     padding: 15px;
   }

@@ -10,6 +10,7 @@ import {ref} from "vue";
 
 import {useCounterStore} from "@/stores/counter.js";
 const store = useCounterStore()
+
 const about = ref()
 store.about = about
 

@@ -1,3 +1,10 @@
+<script setup>
+import {useCounterStore} from "@/stores/counter.js"
+
+const store = useCounterStore()
+const {scrollToAbout, scrollToWorks, scrollToContacts} = store
+</script>
+
 <template>
   <header class="header">
     <div class="container">
@@ -42,12 +49,6 @@
     </div>
   </header>
 </template>
-
-<script setup>
-import {useCounterStore} from "@/stores/counter.js";
-const store = useCounterStore()
-const {scrollToAbout, scrollToWorks, scrollToContacts} = store
-</script>
 
 <style scoped>
 .container {

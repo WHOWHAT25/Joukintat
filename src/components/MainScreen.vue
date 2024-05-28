@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <div class="image">
-      <img class="image_media" src="../../public/img/TatooBack.jpg" alt="Фон">
+      <img class="image_media" src="/img/TatooBack.jpg" alt="Фон">
     </div>
     <div class="intro_content">
       <div class="container">
